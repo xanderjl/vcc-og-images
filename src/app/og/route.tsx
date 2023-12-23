@@ -1,11 +1,10 @@
 import { ImageResponse } from "next/og";
-import type { NextRequest } from "next/server";
 
 import baseUrl from "@/utils/baseUrl";
 
 export const runtime = "edge";
 
-export const GET = async ({ url }: NextRequest) => {
+export const GET = async ({ url }: Request) => {
   const params = new URL(url).searchParams;
   const title = params.get("title") ?? "";
   const subtitle = params.get("subtitle") ?? "";
