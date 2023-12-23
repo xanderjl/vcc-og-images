@@ -1,20 +1,20 @@
 import { ImageResponse } from "next/og";
 
-// import baseUrl from "@/utils/baseUrl";
+import baseUrl from "@/utils/baseUrl";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 export const GET = async ({ url }: Request) => {
   const params = new URL(url).searchParams;
   const title = params.get("title") ?? "";
   const subtitle = params.get("subtitle") ?? "";
 
-  // const dmSerifDisplay = await fetch(
-  //   new URL(
-  //     `${baseUrl}/fonts/dm-serif-display/DMSerifDisplay-Regular.ttf`,
-  //     import.meta.url,
-  //   ),
-  // ).then((res) => res.arrayBuffer());
+  const dmSerifDisplay = await fetch(
+    new URL(
+      `${baseUrl}/fonts/dm-serif-display/DMSerifDisplay-Regular.ttf`,
+      import.meta.url,
+    ),
+  ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
@@ -26,13 +26,13 @@ export const GET = async ({ url }: Request) => {
     {
       width: 1200,
       height: 630,
-      // fonts: [
-      //   {
-      //     data: dmSerifDisplay,
-      //     name: "DM Serif Display",
-      //     style: "normal",
-      //   },
-      // ],
+      fonts: [
+        {
+          data: dmSerifDisplay,
+          name: "DM Serif Display",
+          style: "normal",
+        },
+      ],
     },
   );
 };
