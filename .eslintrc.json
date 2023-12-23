@@ -33,10 +33,7 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "import/consistent-type-specifier-style": [
-      "error",
-      "prefer-top-level"
-    ],
+    "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
     "react/prop-types": "off",
     "object-curly-spacing": [
       "warn",
@@ -47,9 +44,6 @@
       }
     ],
     "comma-spacing": "warn",
-    "quotes": [
-      "warn",
-      "double"
-    ]
+    "quotes": ["warn", "double"]
   }
 }

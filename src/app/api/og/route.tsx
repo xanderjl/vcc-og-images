@@ -5,7 +5,7 @@ import baseUrl from "@/utils/baseUrl";
 
 export const runtime = "edge";
 
-const Image = async ({ url }: NextRequest) => {
+export const GET = async ({ url }: NextRequest) => {
   const params = new URL(url).searchParams;
   const title = params.get("title") ?? "";
   const subtitle = params.get("subtitle") ?? "";
@@ -37,5 +37,3 @@ const Image = async ({ url }: NextRequest) => {
     },
   );
 };
-
-export default Image;
