@@ -7,9 +7,9 @@ export const GET = async ({ url }: Request) => {
   const title = params.get("title") ?? "";
   const subtitle = params.get("subtitle") ?? "";
 
-  const dmSerifDisplay = await fetch(
-    "https://pr63tkdud6xj8zub.public.blob.vercel-storage.com/DMSerifDisplay-Regular.ttf",
-  ).then((res) => res.arrayBuffer());
+  const dmSerifDisplay = await fetch(process.env.FONT_URL).then((res) =>
+    res.arrayBuffer(),
+  );
 
   return new ImageResponse(
     (
