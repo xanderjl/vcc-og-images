@@ -14,6 +14,8 @@ export const GET = async ({ url }: Request) => {
     import.meta.url,
   ).toString();
 
+  console.log({ dmUrl });
+
   const dmSerifDisplay = await fetch(dmUrl).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
