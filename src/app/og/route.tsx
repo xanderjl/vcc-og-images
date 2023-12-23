@@ -1,7 +1,5 @@
 import { ImageResponse } from "@vercel/og";
 
-import baseUrl from "@/utils/baseUrl";
-
 export const runtime = "experimental-edge";
 
 export const GET = async ({ url }: Request) => {
@@ -10,10 +8,7 @@ export const GET = async ({ url }: Request) => {
   const subtitle = params.get("subtitle") ?? "";
 
   const dmSerifDisplay = await fetch(
-    new URL(
-      `${baseUrl}/fonts/dm-serif-display/DMSerifDisplay-Regular.ttf`,
-      import.meta.url,
-    ),
+    "https://pr63tkdud6xj8zub.public.blob.vercel-storage.com/DMSerifDisplay-Regular.ttf",
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
