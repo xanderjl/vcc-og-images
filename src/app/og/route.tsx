@@ -2,7 +2,7 @@ import { ImageResponse } from "@vercel/og";
 
 import baseUrl from "@/utils/baseUrl";
 
-export const runtime = "edge";
+export const runtime = "experimental-edge";
 
 export const GET = async ({ url }: Request) => {
   const params = new URL(url).searchParams;
