@@ -1,5 +1,7 @@
 import { ImageResponse } from "next/og";
 
+import baseUrl from "@/utils/baseUrl";
+
 export const runtime = "edge";
 
 export const GET = async ({ url }: Request) => {
@@ -9,7 +11,7 @@ export const GET = async ({ url }: Request) => {
 
   const dmSerifDisplay = await fetch(
     new URL(
-      "../../assets/fonts/dm-serif-display/DMSerifDisplay-Regular.ttf",
+      `${baseUrl}/fonts/dm-serif-display/DMSerifDisplay-Regular.ttf`,
       import.meta.url,
     ),
   ).then((res) => res.arrayBuffer());
