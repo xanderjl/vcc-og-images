@@ -1,5 +1,5 @@
 {
-  "name": "vc-og-images",
+  "name": "vcc-og-images",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,8 +17,18 @@
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
     "@types/react-dom": "^18",
     "eslint": "^8",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-typescript-sort-keys": "^3.1.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.1.1",
     "eslint-config-next": "14.0.4"
   }
 }
