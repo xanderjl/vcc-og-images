@@ -1,8 +1,8 @@
-import { ImageResponse } from "next/og";
+import { ImageResponse } from "@vercel/og";
 
 import baseUrl from "@/utils/baseUrl";
 
-export const runtime = "nodejs";
+export const runtime = "edge";
 
 export const GET = async ({ url }: Request) => {
   const params = new URL(url).searchParams;
